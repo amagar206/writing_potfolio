@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAGAR MOHMED | Tech Creator & Writer</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS for Advanced Effects -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617; /* slate-950 */
+            color: #f8fafc; /* slate-50 */
+            overflow-x: hidden;
+        }
+
+        /* Background Grid Pattern */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        /* Glassmorphism Panels */
+        .glass {
+            background: rgba(15, 23, 42, 0.6); /* slate-900 with opacity */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, #22d3ee 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Neon Glowing Hover Effects */
+        .hover-neon-cyan {
+            transition: all 0.4s ease;
+        }
+        .hover-neon-cyan:hover {
+            box-shadow: 0 0 25px rgba(34, 211, 238, 0.4);
+            border-color: rgba(34, 211, 238, 0.6);
+            transform: translateY(-5px);
+        }
+
+        .hover-neon-purple {
+            transition: all 0.4s ease;
+        }
+        .hover-neon-purple:hover {
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+            border-color: rgba(168, 85, 247, 0.6);
+            transform: translateY(-5px);
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Glowing Orbs in Background */
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: -1;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="relative antialiased">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 z-[-2] bg-grid pointer-events-none"></div>
+    <div class="glow-orb bg-cyan-600/30 w-96 h-96 top-[-10%] left-[-10%]"></div>
+    <div class="glow-orb bg-purple-600/20 w-[500px] h-[500px] bottom-[20%] right-[-10%]"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glass border-b-0 py-4">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-microchip text-cyan-400"></i>
+                AM<span class="text-cyan-400">_</span>TECH<span class="text-purple-400">_</span>MA
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+                <a href="#youtube" class="hover:text-cyan-400 transition-colors">YouTube</a>
+                <a href="#instagram" class="hover:text-purple-400 transition-colors">Instagram</a>
+                <a href="#services" class="hover:text-cyan-400 transition-colors">Writing Services</a>
+            </div>
+            <a href="#services" class="px-5 py-2 rounded-full border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 transition-all text-sm">
+                Hire Me
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-6 relative">
+        <div class="text-center max-w-4xl mx-auto z-10">
+            <div class="inline-block mb-6 px-4 py-1.5 rounded-full glass text-sm font-medium text-purple-300 border-purple-500/30">
+                <i class="fa-solid fa-rocket mr-2"></i> Tech Content & Articles
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight">
+                AMAGAR MOHMED
+                <br />
+                <span class="text-gradient">Tech Creator & Writer.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Demystifying digital infrastructure, programming, and cybersecurity on YouTube, while crafting high-quality, accessible technical articles for global audiences.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#youtube" class="px-8 py-4 rounded-lg bg-cyan-500 text-slate-950 font-bold hover:bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-youtube"></i> Watch Videos
+                </a>
+                <a href="#services" class="px-8 py-4 rounded-lg glass hover:bg-white/10 transition-all font-medium flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-pen-nib"></i> Order Articles
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Section -->
+    <section id="youtube" class="py-24 px-6 border-t border-white/5 bg-slate-900/20">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-sm font-bold text-cyan-500 tracking-widest uppercase mb-2">Video Content</h2>
+            <h3 class="text-4xl font-bold mb-6">AM_TECH_MA on YouTube</h3>
+            <p class="text-slate-400 text-lg mb-6">
+                I break down complex IT concepts into digestible videos. Whether you're learning about server architectures, setting up local networks, or writing your first lines of Python, my channel is your technical companion.
+            </p>
+            <ul class="space-y-4 mb-8 text-left inline-block">
+                <li class="flex items-center gap-3">
+                    <i class="fa-solid fa-network-wired text-cyan-400 w-5"></i>
+                    <span class="text-slate-300">Networking & Digital Infrastructure</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fa-solid fa-shield-halved text-cyan-400 w-5"></i>
+                    <span class="text-slate-300">Cybersecurity Basics</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fa-solid fa-code text-cyan-400 w-5"></i>
+                    <span class="text-slate-300">Programming (C++, Python, Web Dev)</span>
+                </li>
+            </ul>
+            <br>
+            <a href="#" class="inline-flex items-center gap-2 text-cyan-400 font-bold hover:text-cyan-300 transition-colors">
+                Subscribe to Channel <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section id="instagram" class="py-24 px-6 border-t border-white/5 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center flex-col-reverse md:flex-row">
+                <div class="order-2 md:order-1 flex justify-center">
+                    <!-- Mock Phone/Instagram Frame -->
+                    <div class="glass p-4 rounded-[2.5rem] hover-neon-purple w-[300px] border-4 border-slate-800 relative shadow-2xl bg-slate-900">
+                        <div class="w-32 h-6 bg-slate-800 absolute top-0 left-1/2 -translate-x-1/2 rounded-b-xl"></div>
+                        <div class="flex items-center gap-3 mb-4 pt-6 px-2">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
+                                <div class="bg-slate-900 w-full h-full rounded-full flex items-center justify-center">
+                                    <i class="fa-solid fa-user text-xs text-white"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-white leading-tight">am_tech_ma</p>
+                                <p class="text-xs text-slate-400">Tech Creator</p>
+                            </div>
+                        </div>
+                        <div class="aspect-square bg-slate-800 rounded-lg mb-4 overflow-hidden">
+                            <img src="https://placehold.co/400x400/1e293b/a855f7?text=Coding+Setup" alt="Instagram Post" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex gap-4 text-slate-300 px-2 pb-2">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-sm font-bold text-purple-500 tracking-widest uppercase mb-2">Daily Updates</h2>
+                    <h3 class="text-4xl font-bold mb-6">@am_tech_ma on Instagram</h3>
+                    <p class="text-slate-400 text-lg mb-6">
+                        Follow my daily tech journey. I post behind-the-scenes content, quick coding tips, hardware setups, and updates on my latest writing projects and videos.
+                    </p>
+                    <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold hover:shadow-[0_0_20px_rgba(168,85,247,0.5)] transition-all">
+                        <i class="fa-brands fa-instagram"></i> Follow on Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Writing Services Section -->
+    <section id="services" class="py-24 px-6 border-t border-white/5 bg-slate-900/40 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Technical Writing Services</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">
+                    I translate complex IT and programming concepts into clear, engaging articles tailored for B1 English level audiences and general tech readers.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <!-- Card 1 -->
+                <div class="glass p-8 rounded-2xl hover-neon-cyan group">
+                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 border border-cyan-500/20 text-cyan-400 text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Accessible English</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Writing with a solid B1 level ensures the content is clear, grammatically sound, and avoids overly convoluted jargon—perfect for a global audience.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass p-8 rounded-2xl hover-neon-cyan group">
+                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 border border-cyan-500/20 text-cyan-400 text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Native Tech Literacy</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        I write what I know. My background in digital infrastructure and coding means I understand the core of your product, resulting in authentic content.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass p-8 rounded-2xl hover-neon-cyan group">
+                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 border border-cyan-500/20 text-cyan-400 text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">SEO & Sponsored Posts</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Optimized articles designed to rank. Perfect for SaaS promotions, tech blogs, and specialized campaigns on platforms like Publisuites.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Publisuites CTA -->
+            <div class="glass p-10 rounded-3xl border-cyan-500/30 text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-cyan-600/10 blur-[50px]"></div>
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold mb-4">Ready to order high-quality tech content?</h3>
+                    <p class="text-slate-300 mb-8 max-w-xl mx-auto">
+                        I am actively taking orders for technical articles, blog posts, and tutorials through my Publisuites profile.
+                    </p>
+                    <!-- REPLACE the href below with your actual Publisuites link -->
+                    <a href="https://www.publisuites.com/" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-cyan-500 text-slate-950 font-bold hover:bg-cyan-400 transition-colors">
+                        Hire Me on Publisuites <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-950 py-12 px-6 text-center">
+        <div class="max-w-6xl mx-auto flex flex-col items-center">
+            <div class="text-2xl font-bold tracking-wider mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-microchip text-cyan-400"></i> AM<span class="text-cyan-400">_</span>TECH<span class="text-purple-400">_</span>MA
+            </div>
+            <div class="flex gap-6 mb-8">
+                <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400 transition-all">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center text-slate-400 hover:text-purple-400 hover:border-purple-400 transition-all">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.publisuites.com/" target="_blank" class="w-10 h-10 rounded-full glass flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400 transition-all">
+                    <i class="fa-solid fa-pen-nib"></i>
+                </a>
+            </div>
+            <p class="text-slate-500 text-sm">
+                &copy; <script>document.write(new Date().getFullYear())</script> Amagar Mohmed. All rights reserved. Designed for Tech Excellence.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
